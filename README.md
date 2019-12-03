@@ -1,3 +1,1 @@
-# project
-from PC
-Copy Rights Vinushan
+# Content Managment System for Monthly Magazine - Group Project
