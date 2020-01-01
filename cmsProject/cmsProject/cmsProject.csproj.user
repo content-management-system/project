@@ -12,5 +12,6 @@
     <WebStackScaffolding_DbContextTypeFullName>cmsProject.Models.cmsDbContext</WebStackScaffolding_DbContextTypeFullName>
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
     <WebStackScaffolding_IsViewGenerationSelected>True</WebStackScaffolding_IsViewGenerationSelected>
+    <NameOfLastUsedPublishProfile>cmsProject20191213092021 - Web Deploy</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>

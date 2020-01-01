@@ -24,8 +24,30 @@ namespace cmsProject.Controllers
             return View(await _context.Contents.ToListAsync());
         }
 
+        public async Task<IActionResult> Blog()
+        {
+            return View(await _context.Contents.ToListAsync());
+        }
+
         // GET: Content/Details/5
         public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var content = await _context.Contents
+                .FirstOrDefaultAsync(m => m.ContentId == id);
+            if (content == null)
+            {
+                return NotFound();
+            }
+
+            return View(content);
+        }
+
+        public async Task<IActionResult> Readmore(int? id)
         {
             if (id == null)
             {

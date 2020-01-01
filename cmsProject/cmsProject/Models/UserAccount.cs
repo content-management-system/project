@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -16,11 +17,16 @@ namespace cmsProject.Models
         public string LastName { get; set; }
         [Required]
         [EmailAddress]
-        public string Email { get; set; }
+        [Index(IsUnique = true)]
+        public string Email { get; set; }       
         [Required]
+        [Index(IsUnique = true)]
         public string Username { get; set; }
         [Required]
         [DataType(DataType.Password)]
         public string Password { get; set; }
+        [Required]
+        public string Role { get; set; }
+    
     }
 }

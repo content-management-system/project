@@ -30,15 +30,17 @@ namespace cmsProject.Controllers
             return View();
         }
 
+        public IActionResult Blog()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
         }
 
-        public IActionResult Blog()
-        {
-            return View();
-        }
+        
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
@@ -51,6 +53,7 @@ namespace cmsProject.Controllers
             return View();
         }
 
+       
         [HttpPost]
         public ActionResult Register(UserAccount user)
         {
@@ -60,8 +63,9 @@ namespace cmsProject.Controllers
                 _context.SaveChanges();
 
                 ModelState.Clear();
-                ViewBag.Message =user.FirstName+" "+user.LastName+" is Successfully Registered!";
-               
+                //ViewBag.Message =user.FirstName+" "+user.LastName+" is Successfully Registered!";
+                
+                return RedirectToAction("Login");
             }
             return View();
         }

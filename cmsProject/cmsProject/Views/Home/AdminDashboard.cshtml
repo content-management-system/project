@@ -3,22 +3,26 @@
     ViewData["Title"] = "Admin Dashboard";
 }
 
-<h2>Hello @ViewBag.Username</h2>
-<div class="text-center">
-    <h3 class="display-8">Admin Dashboard</h3>
 
-    <div class="row justify-content-md-center">
-        <div class="form-group col-md-2">
-            <a asp-controller="Content" asp-action="Create" class="btn-lg btn-success btn-block">New Post</a>
+    <div class="text-center">
+        <h2>Hello @ViewBag.Username ! Welcome to SLTC CMS</h2>
+        <h3 class="display-8">Admin Dashboard</h3>
+
+        <div class="row justify-content-md-center">
+            <div class="form-group col-md-2">
+                <a asp-controller="Content" asp-action="Create" class="btn-lg btn-success btn-block">New Post</a>
+            </div>
+            <div class="form-group col-md-2">
+                <a asp-controller="Content" asp-action="Index" class="btn-lg btn-warning btn-block">Content</a>
+            </div>
+            <div class="form-group col-md-2">
+                <a asp-controller="Content" asp-action="Blog" class="btn-lg btn-primary btn-block">Blog</a>
+            </div>
+            @*<div class="form-group col-md-2">
+                <a asp-controller="Home" asp-action="Register" class="btn-lg btn-danger btn-block">Register</a>
+            </div>*@
         </div>
-        <div class="form-group col-md-2">
-            <a asp-controller="Content" asp-action="Index" class="btn-lg btn-warning btn-block">Blog</a>
-        </div>
-        @*<div class="form-group col-md-2">
-            <a asp-controller="Home" asp-action="Register" class="btn-lg btn-danger btn-block">Register</a>
-        </div>*@
     </div>
-</div>
         @*@<div class="mr-2 text-center">
             <a asp-controller="Content" asp-action="Create" class="btn-lg btn-success btn-block" role="button">New Post</a>
             <a asp-controller="Content" asp-action="Create" class="btn-lg btn-success btn-block" role="button">New Post</a>
@@ -76,9 +80,9 @@
                                     @Html.DisplayFor(modelItem => item.Email)
                                 </td>
                                 <td>
-                                    <a asp-action="Edit" asp-route-id="@item.UserId">Edit</a> |
-                                    <a asp-action="Details" asp-route-id="@item.UserId">Details</a> |
-                                    <a asp-action="Delete" asp-route-id="@item.UserId">Delete</a>
+                                    <a asp-action="Edit" asp-controller="UserAccount" asp-route-id="@item.UserId"><i class="fa fa-marker fa-lg"></i> Edit</a> |
+                                    <a asp-action="Details" asp-controller="UserAccount" asp-route-id="@item.UserId" class="text-success ml-1"><i class="fas fa-info-circle fa-lg"></i> Details</a> |
+                                    <a asp-action="Delete" asp-controller="UserAccount" asp-route-id="@item.UserId" class="text-danger ml-1"><i class="fa fa-trash-alt fa-lg"></i> Delete</a>
                                 </td>
                             </tr>
                         }
