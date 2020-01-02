@@ -1,5 +1,5 @@
 # Content Managment System for Monthly Magazine - Group Project
-### Introduction
+
 A content management system (CMS) is an application that is used to manage web content, allowing multiple contributors to create, edit and publish.Content in a CMS is typically stored in a database. Think of them as huge, complicated Excel sheets.
 
 However, instead of logging into the servers and trying to make changes one at a time, groups and individuals have created content management systems to help users communicate easily and efficiently with the database using a secure and easy-to-use interface. Most CMS’s are managed by companies or communities and updated as the web evolves.	
